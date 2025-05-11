@@ -1,39 +1,71 @@
-# Short-Rate-Forecasting
-A comparative study of short-term interest rate forecasting using stochastic models (Vasicek, CIR) and machine learning techniques (Random Forest, LSTM), applied to 13-week U.S. Treasury Bill rates with a rolling window framework and benchmarked against a Random Walk.
+# 📈 Short Rate Forecasting
 
-Models Implemented
-🔹 Mathematical Finance
+This repository contains a comparative study of **short-term interest rate forecasting** using both classical stochastic models and modern machine learning techniques. The focus is on modeling **13-week U.S. Treasury Bill rates**, evaluated through a **rolling window** approach and benchmarked against a **Random Walk**.
 
-Vasicek Model
-A mean-reverting interest rate model with constant volatility, estimated using Maximum Likelihood Estimation (MLE).
-Cox-Ingersoll-Ross (CIR) Model
-A non-negative, mean-reverting model with volatility proportional to the square root of the rate.
+---
 
-🔹 Machine Learning
+## 🔍 Objective
 
-Random Forest Regressor
-An ensemble learning model based on decision trees that captures non-linear patterns in lagged rate data.
-LSTM (Long Short-Term Memory)
-A type of recurrent neural network (RNN) designed for sequence data, capable of learning time-dependent patterns
+To evaluate the forecasting performance of:
+- **Vasicek Model**
+- **Cox-Ingersoll-Ross (CIR) Model**
+- **Random Forest Regressor**
+- **Long Short-Term Memory (LSTM)**
 
- Benchmark
-Random Walk
-Serves as the baseline model. Forecasts are generated assuming that the best estimate for tomorrow's rate is today's rate. All models are expected to outperform this naïve benchmark.
+Against a **Random Walk baseline** across multiple horizons:
+- **1 day**
+- **1 week**
+- **1 month**
+- **3 months**
 
-Methodology
+---
 
-All models are evaluated using a rolling window forecasting approach:
-Window Size: 90 observations
-Forecast Horizons:
-1-step ahead (1 day)
-7-step ahead (1 week)
-30-step ahead (1 month)
-90-step ahead (3 months)
+## 🧠 Models
 
-Evaluation Metrics
-Mean Squared Error (MSE): Measures the average squared difference between predicted and actual rates.
-Directional Accuracy: Measures whether the model correctly predicts the direction of rate movement.
-Visual Forecast Comparison: Plots model forecasts against actual rates for interpretability.
+### 🧮 Mathematical Finance
+- **Vasicek Model** – a mean-reverting process with constant volatility.
+- **CIR Model** – ensures non-negative rates with state-dependent volatility.
+
+### 🤖 Machine Learning
+- **Random Forest** – captures nonlinear dependencies using ensemble decision trees.
+- **LSTM** – a type of RNN capable of learning time-dependent patterns.
+
+---
+
+## 🔄 Methodology
+
+All models use a **rolling window approach** with:
+- **90 observations per training step**
+- Forecasts made for **1, 7, 30, and 90 steps ahead**
+
+---
+
+## 📊 Evaluation Metrics
+
+- **Mean Squared Error (MSE)** – for accuracy
+- **Directional Accuracy** – for predicting rate movement direction
+- **Visual Forecast Plots** – for interpretability
+
+---
+
+## 📁 Repository Structure
+
+| File                                | Description                                                             |
+|-------------------------------------|-------------------------------------------------------------------------|
+| `Short_Forecasting_Rate_.ipynb`     | Main notebook comparing all models using rolling windows               |
+| `CIR_Simulation_and_Estimation_.ipynb` | Simulation + calibration of CIR model using MLE                         |
+| `Vasicek_Simulation_and_Estimation_.ipynb` | Simulation + calibration of Vasicek model using MLE                      |
+| `treasury_bill_data.xlsx`           | Historical 13-week U.S. Treasury Bill data                              |
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Prerequisites
+Install required Python libraries:
+```bash
+pip install numpy pandas scikit-learn matplotlib tensorflow
+
 
 
 
