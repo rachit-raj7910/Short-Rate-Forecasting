@@ -1,10 +1,10 @@
-# 📈 Short Rate Forecasting
+# Short Rate Forecasting
 
 This repository contains a comparative study of **short-term interest rate forecasting** using both classical stochastic models and modern machine learning techniques. The focus is on modeling **13-week U.S. Treasury Bill rates**, evaluated through a **rolling window** approach and benchmarked against a **Random Walk**.
 
 ---
 
-## 🔍 Objective
+##  Objective
 
 To evaluate the forecasting performance of:
 - **Vasicek Model**
@@ -20,19 +20,19 @@ Against a **Random Walk baseline** across multiple horizons:
 
 ---
 
-## 🧠 Models
+## Models
 
-### 🧮 Mathematical Finance
+###  Mathematical Finance
 - **Vasicek Model** – a mean-reverting process with constant volatility.
 - **CIR Model** – ensures non-negative rates with state-dependent volatility.
 
-### 🤖 Machine Learning
+###  Machine Learning
 - **Random Forest** – captures nonlinear dependencies using ensemble decision trees.
 - **LSTM** – a type of RNN capable of learning time-dependent patterns.
 
 ---
 
-## 🔄 Methodology
+##  Methodology
 
 All models use a **rolling window approach** with:
 - **90 observations per training step**
@@ -40,7 +40,7 @@ All models use a **rolling window approach** with:
 
 ---
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 - **Mean Squared Error (MSE)** – for accuracy
 - **Directional Accuracy** – for predicting rate movement direction
@@ -48,7 +48,7 @@ All models use a **rolling window approach** with:
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 | File                                | Description                                                             |
 |-------------------------------------|-------------------------------------------------------------------------|
@@ -59,12 +59,6 @@ All models use a **rolling window approach** with:
 
 ---
 
-## 🚀 Getting Started
-
-### 🔧 Prerequisites
-Install required Python libraries:
-```bash
-pip install numpy pandas scikit-learn matplotlib tensorflow
 
 
 
